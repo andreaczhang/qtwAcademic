@@ -1,10 +1,10 @@
-# PACKAGE <a href="https://docs.sykdomspulsen.no/PACKAGE/"><img src="man/figures/logo.png" align="right" width="120" /></a>
+# qtwAcademic <a href="https://docs.sykdomspulsen.no/qtwAcademic/"><img src="man/figures/logo.png" align="right" width="120" /></a>
 
 ## Overview 
 
-[PACKAGE](https://docs.sykdomspulsen.no/PACKAGE/) is a system to help you organize projects. Most analyses have three (or more) main sections: code, results, and data, each with different requirements (version control/sharing/encryption). You provide folder locations and 'org' helps you take care of the details.
+[qtwAcademic](https://docs.sykdomspulsen.no/qtwAcademic/) is a system to help you organize projects. Most analyses have three (or more) main sections: code, results, and data, each with different requirements (version control/sharing/encryption). You provide folder locations and 'org' helps you take care of the details.
 
-Read the introduction vignette [here](http://docs.sykdomspulsen.no/PACKAGE/articles/PACKAGE.html) or run `help(package="PACKAGE")`.
+Read the introduction vignette [here](http://docs.sykdomspulsen.no/qtwAcademic/articles/qtwAcademic.html) or run `help(package="qtwAcademic")`.
 
 ## splverse
 
@@ -30,6 +30,6 @@ Save the file and restart R.
 You can now install [splverse](https://docs.sykdomspulsen.no/packages) packages from our [drat repository](https://docs.sykdomspulsen.no/drat/).
 
 ```
-install.packages("PACKAGE")
+install.packages("qtwAcademic")
 ```
 

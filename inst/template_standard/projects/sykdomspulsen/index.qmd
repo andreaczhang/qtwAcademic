@@ -1,0 +1,7 @@
+---
+title: "Sykdomspulsen"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+Sykdomspulsen is a project for standardised public health surveillance system.

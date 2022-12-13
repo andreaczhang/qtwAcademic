@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  page-navigation: true
+  title: "Hello, I'm Chi"
+  
+  page-footer: 
+    left: "&copy; Copyright 2022, Chi Zhang"
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+
+  sidebar: 
+    background: "#A9CCE3"
+    pinned: true
+    align: center
+    style: "docked"
+    collapse-level: 1
+    contents: 
+    
+      - text: "Projects"
+        href: projects.qmd
+            
+      - text: "Teaching & Tutorials"
+        href: teaching.qmd
+        
+      - text: "R packages"
+        href: rpkg.qmd
+           
+      - text: "Talks"
+        href: talks.qmd
+
+      - text: "Blog"
+        href: blog.qmd
+
+      - section: "About"
+        contents: 
+          - text: "About me"
+            href: about_me.qmd
+          - text: "CV"
+            href: about_cv.qmd
+          - text: "Publication"
+            href: about_publication.qmd
+            
+ 
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    mainfont: "Atkinson Hyperlegible"
+
+editor: visual
+

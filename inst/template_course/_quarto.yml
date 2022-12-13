@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Oslo Bioinformatics"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/ocbe-uio/2022_bioinformatics_workshop
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - part0_prep.qmd
+      - part1_eda.qmd
+      - part2_model.qmd
+  page-navigation: true
+
+format:
+  html:
+    theme: yeti
+    css: styles.css
+    toc: true
+
+editor: visual
+

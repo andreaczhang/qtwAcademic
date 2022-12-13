@@ -1,0 +1,9 @@
+---
+title: "MF9130"
+description: "Introductory course in statistics"
+date: "2022-10-25"
+categories: [course, statistics]
+type: statistics
+image: "image.jpg"
+---
+

@@ -1,10 +1,10 @@
 ---
-title: "Introduction to PACKAGE"
-author: "Richard White"
+title: "Introduction to qtwAcademic"
+author: "Chi Zhang"
 date: "2020-02-17"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Introduction to PACKAGE}
+  %\VignetteIndexEntry{Introduction to qtwAcademic}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

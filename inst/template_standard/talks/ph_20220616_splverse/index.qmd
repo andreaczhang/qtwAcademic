@@ -1,0 +1,9 @@
+---
+title: "Introducing Sykdomspulsen"
+subtitle: "An automated public health surveillance platform"
+description: "45 min talk and tutorial at Oslo UseR meetup"
+date: "2022-06-16"
+categories: [ph]
+---
+
+![](image_talk_20220616.png)

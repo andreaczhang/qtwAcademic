@@ -1,0 +1,23 @@
+---
+title: "About"
+format: 
+  html:
+    code-fold: true
+    code-tools: true
+editor: visual
+---
+
+A central problem in machine learning is how to make an algorithm perform well not just on the training data, but also on new inputs. Many strategies in machine learning are explicitly designed to reduce this test error, possibly at the expense of increased training error. These strategies are collectively known as regularisation and they are instrumental for good performance of any kind of prediction or classification model, especially in the context of small data (many features, few samples).
+
+We will discuss basic connected concepts of generalisation, overfitting, bias-variance trade-off and regularisation and will illustrate the principles with penalised (generalised) linear regression models, with ridge, lasso and elastic net penalties as prominent examples.
+
+Finally, we will present the idea of structured penalties and priors, which can be tailored to account for structures present in the data, e.g. multi-modality or complex correlation structures. We will use examples from large-scale cancer pharmacogenomic screens, where penalised regression and alternative Bayesian approaches are used for predicting drug sensitivity and synergy based on the genomic characterisation of tumour samples.
+
+In the hands-on tutorial we will use R to perform an integrated analysis of multi-omics data with penalised regression.
+
+
+#### Contact
+
+Manuela Zucknick: manuela.zucknick@medisin.uio.no
+
+Chi Zhang: chi.zhang@medisin.uio.no

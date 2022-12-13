@@ -1,0 +1,39 @@
+---
+title: "R packages"
+description: |
+  A few packages 
+listing:
+  - id: publichealth
+    max-description-length: 80
+    image-height: 250px
+    fields: [title, description]
+    contents: 
+      - rpkg/medicode
+      - rpkg/covidnor
+      - rpkg/mortanor
+    type: table
+    grid-item-border: false
+    sort-ui: false
+    filter-ui: false
+
+  - id: tools
+    max-description-length: 80
+    image-height: 250px
+    fields: [title, description]
+    contents: 
+      - rpkg/cstime
+    type: table
+    grid-item-border: false
+    sort-ui: false
+    filter-ui: false
+---
+
+# Public health
+
+::: {#publichealth}
+:::
+
+# Tools
+
+::: {#tools}
+:::

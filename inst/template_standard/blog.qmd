@@ -1,0 +1,14 @@
+---
+title: "Blog"
+description: |
+  Something that Chi writes about 
+listing:
+  contents: blog
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+---
+
+FOR NOW IT IS JUST A PLACEHOLDER

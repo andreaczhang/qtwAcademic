@@ -1,0 +1,11 @@
+---
+title: "Network Analysis of Hospital EHR data"
+description: "The talk I gave at Big Insight Day 2021"
+date: "2021-02-18"
+categories: [ehr]
+priority: 2
+---
+
+![](image_ehr_20210218.png)
+
+Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.

@@ -1,0 +1,10 @@
+---
+title: "Oslo Bioinformatics Week"
+description: "Machine Learning principles for small and noisy biomedical data"
+date: "2022-10-25"
+categories: [workshop, r]
+type: bioinformatics
+image: "image.jpg"
+---
+
+As TA

@@ -1,0 +1,10 @@
+---
+title: "R for novice"
+description: "Software carpentry course for introductory R"
+date: "2022-10-25"
+categories: [workshop, r]
+type: rstats
+image: "image.jpg"
+---
+
+Rstat 

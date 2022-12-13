@@ -1,0 +1,128 @@
+---
+title: "R Lab - Part I"
+format: 
+  html:
+    code-fold: false
+    code-tools: true
+editor: visual
+---
+
+## A Cancer Modeling Example
+
+See `3_StatPrinciples_RLab.pdf` for some background info.
+
+Exercise on analysis of miRNA, mRNA and protein data from the paper Aure et al, Integrated analysis reveals microRNA networks coordinately expressed with key proteins in breast cancer, Genome Medicine, 2015.
+
+Please run the code provided to replicate some of the analyses in Aure et al. (2015). Make sure you can explain what all the analysis steps do and that you understand all the results.
+
+In addition, there are three extra tasks `Task 1`, `Task 2`, `Task 3`, where no R code is provided. Please do these tasks when you have time available at the end of the lab.
+
+### Load the data
+
+Read the data, and convert to matrix format.
+
+```{r}
+#| label: load-data
+#| warning: false
+#| echo: true
+
+mir <- read.table("lab/data/miRNA-421x282.txt", header=T, sep="\t", dec=".")
+rna <- read.table("lab/data/mRNA-100x282.txt", header=T, sep="\t", dec=".")
+prt <- read.table("lab/data/prot-100x282.txt", header=T, sep="\t", dec=".")
+
+# Convert to matrix format
+
+mir <- as.matrix(mir)
+rna <- as.matrix(rna)
+prt <- as.matrix(prt)
+```
+
+Print the data
+
+```{r}
+#| label: look-at-data
+#| warning: false
+#| echo: true
+
+mir[1:4, 1:4]
+rna[1:4, 1:4]
+prt[1:4, 1:4]
+```
+
+Visualise the overall distribution of expression levels by histogram
+
+```{r}
+par(mfrow=c(3,1))
+hist(mir, nclass=40, xlim=c(-5,5), col="lightblue")
+hist(rna, nclass=40, xlim=c(-5,5), col="lightblue")
+hist(prt, nclass=40, xlim=c(-5,5), col="lightblue")
+```
+
+mRNA-protein associations (only first nine genes)
+
+```{r}
+par(mfrow=c(3,3))
+par(mar=c(3,3,3,3))
+for (i in 1:9) {
+  plot(rna[i,], prt[i,], pch=19)
+  title(rownames(rna)[i])
+  lines(smooth.spline(rna[i,], prt[i,], df=4), col="red")
+}
+```
+
+::: callout-note
+## Task 1
+
+Extend the above analysis to cover all genes.
+:::
+
+## Explore the correlations
+
+Compute and plot mRNA-protein correlations
+
+```{r}
+rho = rep(NA, nrow(rna))  
+for (i in 1:nrow(rna)) {
+  rho[i] = cor(rna[i,], prt[i,])
+}
+par(mfrow=c(1,1))
+hist(rho, col="lightblue")
+```
+
+Calculate the correlation of each miRNA to each protein
+
+```{r}
+RHO = matrix(NA, nrow(mir), nrow(prt))
+for (i in 1:nrow(mir)) {
+  for (j in 1:nrow(prt)) {
+     RHO[i,j] = cor(mir[i,], prt[j,]) 
+  }
+}
+par(mfrow=c(1,1))
+hist(RHO, col="lightblue")
+```
+
+## Visualize as heatmap
+
+Use the code provided to visualize the heatmap.
+
+```{r}
+#| echo: true
+#| eval: false
+
+source("lab/code/clustermap_beta.R")
+
+plot.init(tree=c(2,3))
+hcluster(RHO, clust="row", distance="euclidean", linkage="complete")
+hcluster(RHO, clust="col", distance="euclidean", linkage="complete")
+plot.hmap(RHO)
+plot.tree(side=2)
+plot.tree(side=3)
+plot.hmap.key()
+```
+
+::: callout-note
+## Task 2
+
+Compare this heatmap with Figure 3 in Aure et al. (2015). Are these two figures showing the same results?
+:::

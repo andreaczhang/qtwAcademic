@@ -1,24 +1,26 @@
-Package: PACKAGE
-Title: Organising Projects
-Version: 2020.5.25
-Authors@R: c(
-  person(c("Richard","Aubrey"), "White", email = "hello@rwhite.no", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-6747-1726")),
-  person(given = "Folkehelseinstituttet", role = c("cph"))
-  )
-Description: A system to help you organize projects. Most analyses have three (or more) main sections: code, results, and data, each with different requirements (version control/sharing/encryption). You provide folder locations and 'org' helps you take care of the details.
-Depends: R (>= 3.3.0)
+Package: qtwAcademic
+Title: Quarto Website for Academics
+Version: 2022.12.13
+Authors@R: 
+    c(
+      person(
+        given = "Chi",
+        family = "Zhang",
+        role = c("aut", "cre"),
+        email = "andreachizhang@yahoo.com"))
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+Depends: R (>= 3.3.2)
+Imports: 
+    data.table, 
+    ggplot2, 
+    magrittr
+Suggests:
+    knitr
 License: MIT + file LICENSE
-URL: https://docs.sykdomspulsen.no/PACKAGE/, https://github.com/sykdomspulsen-org/PACKAGE
-BugReports: https://github.com/sykdomspulsen-org/PACKAGE/issues
+URL: https://docs.sykdomspulsen.no/qtwAcademic/, https://github.com/sykdomspulsen-org/qtwAcademic
+BugReports: https://github.com/sykdomspulsen-org/qtwAcademic/issues
 Encoding: UTF-8
 LazyData: true
-Imports: data.table,
-    magrittr,
-    ggplot2
-Suggests: testthat,
-    knitr,
-    rmarkdown,
-    rstudioapi,
-    glue
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
 VignetteBuilder: knitr
