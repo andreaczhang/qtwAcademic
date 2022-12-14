@@ -1,39 +1,73 @@
 ---
-title: "Statistical Principles in Machine Learning for Small Biomedical Data"
+title: "Title of Your Workshop Session"
 ---
 
-Date: **Tuesday 13 December 2022, 9:00-12:00**
+Date: **Date and time**
 
-Room: **Python (room 2269), Ole-Johan Dahls hus (OJD)**
+Room: **Location**
 
-Instructors: Manuela Zucknick (main), Theophilus Asenso and Chi Zhang
+Instructors: Instructor A, B, C
 
-------------------
+------------------------------------------------------------------------
+
+::: callout-note
+## This workshop template
+
+This workshop template contains 4 pages: 
+
+- Home: `index.qmd` (this page)
+
+- About: `about.qmd`
+
+Two content pages
+
+- Page without code: `part_1_prep.qmd`
+
+- Page with R code: `part_2_eda.qmd`
+
+It is straightforward to add more content pages: you need to create a new `.qmd` file (or copy/paste the existing ones), then link the new page inside `_quarto.yml`. 
+:::
+
+
+::: callout-tip
+## Homepage of your workshop
+
+This is the **homepage** `index.qmd` for your workshop, so ideally it should contain some key information such as **time and place, instructors** and information of the course/workshop. 
+
+It should be easy to navigate.
+:::
 
 
 # Welcome!
 
--   The goal of the workshop is to introduce kep concepts in machine learning, such as regularisation.
--   The workshop is intended for students and researchers who are interested in applying machine learning methods to **small data** (few samples, but potentially many features) or **noisy data** (e.g. biomedical data)
--   Workshop material can be found in the workshop [github repository](https://github.com/ocbe-uio/2022_bioinformatics_workshop).
+-   The goal of the workshop is to ... (*insert your message*)
+-   For example, introduce kep concepts in machine learning, such as regularisation.
+-   Workshop material can be found in the workshop [github repository](https://github.com).
 
 #### Learning Objectives
 
 At the end of the tutorial, participants will be able to
 
--   understand key concepts for training machine learning models such as regularisation;
--   understand how to incorporate data structure in the regularisation process.
+-   understand key concepts for ... (*insert your message*)
+-   For example, training machine learning models such as regularisation.
+-   another objective
 
 #### Pre-requisites
 
 -   Basic familiarity with R
--   Introductory level statistics, including regression
+-   Some other knowledge
+
 
 # Schedule
 
-|     Time      |                  Topic                   |    Presenter     |
-|:-------------:|:-----------------------------------------:|:-------------:|
-| 9:00 - 10:00  | [Session 1: Introduction](part1_eda.qmd) | Manuela Zucknick |
-| 10:15 - 11:00 |     [Session 2: lab](part1_eda.qmd)      | Manuela Zucknick |
-| 11:15 - 12:00 |     [Session 3: lab](part2_eda.qmd)      | Manuela Zucknick |
+::: callout-tip
+## Tabular schedule
 
+It can be useful to include a tabular schedule with links.
+:::
+
+
+|     Time      |                  Topic                   |    Presenter     |
+|:--------------:|:-------------------------------------:|:--------------:|
+| 9:00 - 10:30  | [Session 1: Preparation](part_1_prep.qmd) | Instructor A |
+| 10:45 - 12:00 | [Session 2: Exploratory Analysis](part_2_eda.qmd) | Instructor B, C |

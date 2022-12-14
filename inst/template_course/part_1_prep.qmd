@@ -7,6 +7,12 @@ format:
 editor: visual
 ---
 
+::: callout-tip
+## Page without code
+
+This page contains an example for some structured preparation information for a workshop. No code is executed here.
+:::
+
 Here are some preparation information for the participants.
 
 ## Software
@@ -22,16 +28,14 @@ The R package we are using is `glmnet`.
 
 ## Data
 
-The datasets we use can be found [here](https://github.com/ocbe-uio/2022_bioinformatics_workshop/tree/main/lab/data).
+The datasets we use can be found here (*insert link*).
 
 ## Code
 
-The R scripts used in part 1 and part 2 can be found [here](https://github.com/ocbe-uio/2022_bioinformatics_workshop/tree/main/lab/code).
+The R scripts used in part 1 and part 2 can be found here (*insert link*).
 
 ## Resources
 
-Lecture notes [link](https://github.com/ocbe-uio/2022_bioinformatics_workshop/tree/main/lecture_notes)
+Lecture notes (*insert link*)
 
-Lab notes [link](https://github.com/ocbe-uio/2022_bioinformatics_workshop/blob/main/lab/StatPrinciples_RLab.pdf)
-
-Aure 2015 Paper [link](https://github.com/ocbe-uio/2022_bioinformatics_workshop/blob/main/lab/Aure_2015.pdf)
+Lab notes (*insert link*)

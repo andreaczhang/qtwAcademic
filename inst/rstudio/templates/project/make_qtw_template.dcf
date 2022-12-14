@@ -1,6 +1,6 @@
 Binding: make_qtw_template
 Title: Quarto Website using qtwAcademic templates
-OpenFiles: _quarto.yml
+OpenFiles: _quarto.yml, index.qmd
 
 Parameter: check
 Widget: CheckboxInput
@@ -14,9 +14,3 @@ Label: Template
 Fields: Minimal, Standard, Course
 Default: Minimal
 Position: left
-
-Parameter: text
-Widget: TextInput
-Label: Text Input
-Default: Hello, world!
-Position: right

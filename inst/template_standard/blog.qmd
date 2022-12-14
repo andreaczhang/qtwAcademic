@@ -1,7 +1,7 @@
 ---
 title: "Blog"
 description: |
-  Something that Chi writes about 
+  This part is the same as the Quarto default blog template. 
 listing:
   contents: blog
   sort: "date desc"
@@ -11,4 +11,4 @@ listing:
   filter-ui: false
 ---
 
-FOR NOW IT IS JUST A PLACEHOLDER
+Read more about Quarto blogs [here](https://quarto.org/docs/websites/website-blog.html). 

@@ -1,0 +1,7 @@
+---
+title: "project_1"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+In this project I use EHR to explore the hospital transfers. 

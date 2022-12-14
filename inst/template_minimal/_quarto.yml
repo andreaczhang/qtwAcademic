@@ -1,13 +1,25 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "empty_quarto_web"
+  page-navigation: true
+  title: "Hello :)"
+
+  page-footer:
+    left: "&copy; Copyright 2022, Author"
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+
+      - href: projects/index.qmd
+        text: Projects
+
+      - href: about.qmd
+        text: About
 
 format:
   html:

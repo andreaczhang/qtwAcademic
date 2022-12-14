@@ -34,12 +34,6 @@ make_qtw_template <- function(path, ...) {
   # system.file("R", "hello.R", package = 'qtwAcademic')
   template_path <- system.file(template, package = 'qtwAcademic')
 
-  # collect into single text string
-  # contents <- paste(
-  #   paste(header, collapse = "\n"),
-  #   paste(text, collapse = "\n"),
-  #   sep = "\n"
-  # )
 
   # write to index file
   # writeLines(contents, con = file.path(path, "INDEX"))
@@ -48,6 +42,7 @@ make_qtw_template <- function(path, ...) {
   # could be useful to include where to put navigation bar
 
   # copy files to root dir ----
+  # 1. common for all templates ----
   # template 1: minimal
   # yml
   file.copy(from = paste0(template_path, "/", "_quarto.yml"),
@@ -67,10 +62,30 @@ make_qtw_template <- function(path, ...) {
 
 
 
-  # template 2: standard (maybe add one extended)
 
 
 
+  # 2. personal web only ----
+  # profile that are specific for personal websites
+  if(template %in% c("template_minimal", "template_standard")){
+    file.copy(from = paste0(template_path, "/", "profile.png"),
+              to = file.path(path, "profile.png"))
+
+    # project
+    dir.create(file.path(path, "projects"), recursive = T, showWarnings = F)
+
+    file.copy(from = paste0(template_path, "/", "projects/index.qmd"),
+              to = file.path(path, "projects/index.qmd"))
+
+  }
+
+
+  # list ----
+
+
+
+
+  # 3. course/workshop only ----
   # template 3: course
   if(template == "template_course"){
     # copy part 1, part 2 and data
@@ -80,8 +95,8 @@ make_qtw_template <- function(path, ...) {
     file.copy(from = paste0(template_path, "/", "part_2_eda.qmd"),
               to = file.path(path, "part_2_eda.qmd"))
 
-    dir.create(file.path(path, "data"),
-               recursive = T, showWarnings = F)
+    # create path for data
+    dir.create(file.path(path, "data"), recursive = T, showWarnings = F)
     file.copy(from = paste0(template_path, "/", "data/data_example.txt"),
               to = file.path(path, "data/data_example.txt"))
 

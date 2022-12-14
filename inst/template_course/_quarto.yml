@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Oslo Bioinformatics"
+  title: "Workshop Title"
   navbar:
     left:
       - href: index.qmd
@@ -12,14 +12,13 @@ website:
         text: About
     right:
       - icon: github
-        href: https://github.com/ocbe-uio/2022_bioinformatics_workshop
+        href: https://github.com
   sidebar:
     style: "docked"
     search: true
     contents:
-      - part0_prep.qmd
-      - part1_eda.qmd
-      - part2_model.qmd
+      - part_1_prep.qmd
+      - part_2_eda.qmd
   page-navigation: true
 
 format:

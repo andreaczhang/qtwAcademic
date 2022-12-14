@@ -1,0 +1,17 @@
+---
+title: "About this template"
+format: 
+  html:
+    code-fold: false
+    code-tools: false
+editor: visual
+---
+
+::: callout-tip
+## About this template
+
+This page contains some elaborated background information about your workshop, or the instructors.
+:::
+
+This is to demonstrate how to make a drop-down page from the navigation bar.
+

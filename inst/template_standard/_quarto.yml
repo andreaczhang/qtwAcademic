@@ -1,48 +1,39 @@
 project:
   type: website
   output-dir: docs
-  
+
 website:
   page-navigation: true
-  title: "Hello, I'm Chi"
-  
-  page-footer: 
-    left: "&copy; Copyright 2022, Chi Zhang"
+  title: "Hello :)"
+
+  page-footer:
+    left: "&copy; Copyright 2022, Author"
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
 
-  sidebar: 
-    background: "#A9CCE3"
+  sidebar:
     pinned: true
     align: center
     style: "docked"
     collapse-level: 1
-    contents: 
-    
+    contents:
+
       - text: "Projects"
-        href: projects.qmd
-            
-      - text: "Teaching & Tutorials"
-        href: teaching.qmd
-        
-      - text: "R packages"
-        href: rpkg.qmd
-           
+        href: projects/index.qmd
+
       - text: "Talks"
-        href: talks.qmd
+        href: talks/index.qmd
 
       - text: "Blog"
         href: blog.qmd
 
       - section: "About"
-        contents: 
+        contents:
           - text: "About me"
             href: about_me.qmd
-          - text: "CV"
-            href: about_cv.qmd
-          - text: "Publication"
-            href: about_publication.qmd
-            
- 
+          - text: "This template"
+            href: about_template.qmd
+
+
 format:
   html:
     theme: [cosmo, styles.scss]

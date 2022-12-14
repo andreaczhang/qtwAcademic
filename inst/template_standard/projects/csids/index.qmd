@@ -1,7 +1,0 @@
----
-title: "CSIDS"
-categories: [news, code, analysis]
-image: "image.jpg"
----
-
-Consortium for Statistics in Disease Surveillance
