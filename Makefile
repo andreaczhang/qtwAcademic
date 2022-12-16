@@ -17,44 +17,43 @@ fix_description_version:
 	sed -i "s/^Version: .*/Version: $(DATE)/" DESCRIPTION
 	sed -i '/Date\/Publication:/d' DESCRIPTION # delete if exists
 	echo "Date/Publication: $(DATETIMEUTC) UTC" >> DESCRIPTION #append to bottom
-	sudo chmod -R 777 ..
+	chmod -R 777 ..
 
 .ONESHELL:
 build_data:
-	sudo podman run --rm --privileged \
+	docker run --rm --privileged \
 		-v $(shell pwd):/rpkg \
 		docker.io/fhix/rfhiverse:latest /bin/bash -c \
 		'Rscript -e "devtools::load_all(\"/rpkg/\"); gen_data_all(\"/rpkg/data\")"'
-	sudo chmod -R 777 ..
+	chmod -R 777 ..
 
 .ONESHELL:
 build_package:
-	sudo rm -rf ../built
+	rm -rf ../built
 	mkdir ../built
-	sudo podman run --rm --privileged \
-		-v $(shell pwd):/rpkg \
-		-v $(shell pwd)/../built:/built \
-		docker.io/fhix/rfhiverse:latest /bin/bash -c \
+	docker run --rm --privileged \
+		-v "/Users/andrea/docker-volumes/chi-hub/agent-pipelines/$(PKGNAME)/rpkg:/rpkg" \
+		-v "/Users/andrea/docker-volumes/chi-hub/agent-pipelines/$(PKGNAME)/built:/built" \
+		localhost/sc8-su-csverse:latest /bin/bash -c \
 		' \
 		cd /; \
 		R CMD build /rpkg; \
 		cp *.tar.gz /built/; \
 		'
-	sudo chown -R go ../built
-	sudo chmod -R 777 ..
+	chmod -R 777 ..
 
 .ONESHELL:
 check_package:
-	sudo podman run --rm --privileged \
-		-v $(shell pwd):/rpkg \
-		-v $(shell pwd)/../built:/built \
-		docker.io/fhix/rfhiverse:latest /bin/bash -c \
+	docker run --rm --privileged \
+		-v "/Users/andrea/docker-volumes/chi-hub/agent-pipelines/$(PKGNAME)/rpkg:/rpkg" \
+		-v "/Users/andrea/docker-volumes/chi-hub/agent-pipelines/$(PKGNAME)/built:/built" \
+		localhost/sc8-su-csverse:latest /bin/bash -c \
 		' \
 		R CMD check --no-manual /built/*.tar.gz; \
 		mv *.Rcheck /built/; \
 		'
 
-	sudo chmod -R 777 ..
+	chmod -R 777 ..
 
 	if grep -Fq "WARNING" ../built/*.Rcheck/00check.log
 	then
@@ -77,74 +76,42 @@ check_package:
 .ONESHELL:
 drat:
 	# spuls
-	git -C .. clone git@github.com:sykdomspulsen-org/drat.git --branch gh-pages drat_sp
-	sudo podman run --rm --privileged \
-		-v $(shell pwd):/rpkg \
-		-v $(shell pwd)/../built:/built \
-		-v $(shell pwd)/../drat_sp:/drat \
-		docker.io/fhix/rfhiverse:latest /bin/bash -c 'Rscript -e "drat::insertPackage(fs::dir_ls(\"/built/\", regexp=\".tar.gz\$\"), repodir = \"/drat\")"'
+	docker run --rm --privileged \
+		-v "/Users/andrea/docker-volumes/chi-hub/agent-pipelines/$(PKGNAME)/rpkg:/rpkg" \
+		-v "/Users/andrea/docker-volumes/chi-hub/agent-pipelines/$(PKGNAME)/built:/built" \
+		-v "/Users/andrea/Documents/GitHub/drat:/drat" \
+		localhost/sc8-su-csverse:latest /bin/bash -c 'Rscript -e "drat::insertPackage(fs::dir_ls(\"/built/\", regexp=\".tar.gz\$\"), repodir = \"/drat\", action=\"prune\")"'
 
 	# sed -i "/## News/a - **$(PKGNAME) $(PKGVERS)** (linux) inserted at $(DATETIME)" ../drat/README.md
 	# sed -i '1001,\\\$ d' ../drat_sp/README.md # only keep first 1000 lines of readme
 
-	git config --global user.email "sykdomspulsen@fhi.no"
-	git config --global user.name "sykdomspulsen"
+	# git config --global user.email "sykdomspulsen@fhi.no"
+	# git config --global user.name "sykdomspulsen"
 
-	git -C ../drat_sp add -A
-	git -C ../drat_sp commit -am "gocd $(PKGNAME) $(PKGVERS)" #Committing the changes
-	git -C ../drat_sp push -f origin gh-pages #pushes to master branch
+	git -C /drat add -A
+	git -C /drat commit -am "gocd $(PKGNAME) $(PKGVERS)" #Committing the changes
+	git -C /drat push -f origin main #pushes to master branch
 
-	sudo chmod -R 777 ..
-
-	# fhi
-	git -C .. clone git@github.com:folkehelseinstituttet/drat.git --branch gh-pages drat_fhi
-	sudo podman run --rm --privileged \
-		-v $(shell pwd):/rpkg \
-		-v $(shell pwd)/../built:/built \
-		-v $(shell pwd)/../drat_fhi:/drat \
-		docker.io/fhix/rfhiverse:latest /bin/bash -c 'Rscript -e "drat::insertPackage(fs::dir_ls(\"/built/\", regexp=\".tar.gz\$\"), repodir = \"/drat\")"'
-
-	sed -i "/## News/a - **$(PKGNAME) $(PKGVERS)** (linux) inserted at $(DATETIME)" ../drat/README.md
-	sed -i '1001,\\\$ d' ../drat_fhi/README.md # only keep first 1000 lines of readme
-
-	git config --global user.email "sykdomspulsen@fhi.no"
-	git config --global user.name "sykdomspulsen"
-
-	git -C ../drat_fhi add -A
-	git -C ../drat_fhi commit -am "gocd $(PKGNAME) $(PKGVERS)" #Committing the changes
-	git -C ../drat_fhi push -f origin gh-pages #pushes to master branch
-
-	sudo chmod -R 777 ..
 
 .ONESHELL:
 pkgdown:
-	sudo podman run --rm --privileged \
-		-v $(shell pwd):/rpkg \
-		-v $(shell pwd)/../built:/built \
-		-v $(shell pwd)/../drat_sp:/drat \
-		docker.io/fhix/rfhiverse:latest /bin/bash -c 'Rscript -e "devtools::install(\"/rpkg\", dependencies = TRUE, upgrade = FALSE); pkgdown::build_site(\"/rpkg\")"'
+	docker run --rm --privileged \
+		-v "/Users/andrea/docker-volumes/chi-hub/agent-pipelines/$(PKGNAME)/rpkg:/rpkg" \
+		-v "/Users/andrea/docker-volumes/chi-hub/agent-pipelines/$(PKGNAME)/built:/built" \
+		-v "/Users/andrea/Documents/GitHub/drat:/drat" \
+		localhost/sc8-su-csverse:latest /bin/bash -c 'Rscript -e "devtools::install(\"/rpkg\", dependencies = TRUE, upgrade = FALSE); pkgdown::build_site(\"/rpkg\")"'
 
-	git add .
-	git commit -am "Pkgdown built"
-	git subtree split --prefix docs -b gh-pages # create a local gh-pages branch containing the splitted output folder
-	git push -f origin gh-pages:gh-pages # force the push of the gh-pages branch to the remote gh-pages branch at origin
-	git branch -D gh-pages # delete the local gh-pages because you will need it: ref
-
-	sudo chmod -R 777 ..
-
-.ONESHELL:
-drat_prune_history:
-	cd /tmp
-	git clone "git@github.com:folkehelseinstituttet/drat.git"
-	cd drat
-	git config user.name "Sykdomspulsen"
-	git config user.email "sykdomspulsen@fhi.no"
-	git config push.default simple
-	git checkout gh-pages
-
-	git checkout --orphan latest_branch
-	git add -A
-	git commit -am "Cleaning history" #Committing the changes
-	git branch -D gh-pages #Deleting master branch
-	git branch -m gh-pages #renaming branch as master
-	git -C /tmp/drat push -f origin gh-pages #pushes to master branch
+	if [ -d "docs" ]
+	then
+		git add docs
+		git commit -am "Pkgdown built"
+		git subtree split --prefix docs -b gh-pages
+		git push -u -f origin gh-pages:gh-pages
+		git branch -D gh-pages
+		git reset --soft HEAD^
+		git restore --staged .
+		rm -rf docs
+	else
+		# code if not found
+		echo "NO DOCS FOUND"
+	fi
