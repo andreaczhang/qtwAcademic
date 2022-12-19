@@ -29,15 +29,15 @@ website:
       - section: "About"
         contents:
           - text: "About me"
-            href: about_me.qmd
+            href: about.qmd
           - text: "This template"
             href: about_template.qmd
 
 
 format:
   html:
-    theme: [cosmo, styles.scss]
-    mainfont: "Atkinson Hyperlegible"
+    theme: cosmo
+    css: styles.css
+    toc: true
 
-editor: visual
 

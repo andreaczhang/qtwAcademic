@@ -10,8 +10,6 @@
 
   packageStartupMessage(paste0(
     "qtwAcademic ",
-    version,
-    "\n",
-    "https://docs.sykdomspulsen.no/qtwAcademic/"
+    version
   ))
 }

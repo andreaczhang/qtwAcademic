@@ -1,5 +1,5 @@
 Package: qtwAcademic
-Title: Quarto Website for Academics
+Title: Quarto Website Templates for Academics
 Version: 2022.12.13
 Authors@R: 
     c(
@@ -7,19 +7,21 @@ Authors@R:
         given = "Chi",
         family = "Zhang",
         role = c("aut", "cre"),
-        email = "andreachizhang@yahoo.com"))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+        email = "andreachizhang@yahoo.com",
+	comment = c(ORCID = "0000-0003-0501-5909")))
+Description: This package generates Quarto website templates for academics.
+    Templates for personal websites and course/workshop websites are included.
 Depends: R (>= 3.3.2)
 Imports: 
+    fs,
     data.table, 
     ggplot2, 
     magrittr
 Suggests:
     knitr
 License: MIT + file LICENSE
-URL: https://docs.sykdomspulsen.no/qtwAcademic/, https://github.com/sykdomspulsen-org/qtwAcademic
-BugReports: https://github.com/sykdomspulsen-org/qtwAcademic/issues
+URL: https://andreaczhang.github.io/qtwAcademic/, https://github.com/andreaczhang/qtwAcademic
+BugReports: https://github.com/andreaczhang/qtwAcademic/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.1

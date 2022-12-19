@@ -1,7 +1,7 @@
 ---
 title: "Introduction to qtwAcademic"
 author: "Chi Zhang"
-date: "2020-02-17"
+date: "2022-12-19"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to qtwAcademic}
@@ -17,3 +17,7 @@ knitr::opts_chunk$set(
 ```
 
 ## Concept 
+
+This package allows you to quickly start your Quarto website project. 
+
+
