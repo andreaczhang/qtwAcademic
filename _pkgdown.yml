@@ -1,25 +1,4 @@
 url: https://andreaczhang.github.io/qtwAcademic/
-
 template:
   bootstrap: 5
-  bslib:
-    # primary: "#393c61"
-    # secondary: "#E9F39F"
-    border-radius: 0.0rem
-    btn-border-radius: 0.0rem
-    # font-size-base: 0.75rem
 
-# navbar:
-#   bg: "#393c61"
-
-authors:
-  Folkehelseinstituttet:
-    href: "https://www.fhi.no"
-    html: "<img src='man/figures/fhi.png' width=72>"
-  footer:
-    roles: [cre, aut]
-    text: "Crafted by"
-  sidebar:
-    roles: [aut, ctb, cph]
-  before: "This package is proudly brought to you by:"
-  after: "See the [changelog](news/index.html) for other contributors. :pray:"

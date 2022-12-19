@@ -20,7 +20,8 @@ Imports:
 Suggests:
     knitr
 License: MIT + file LICENSE
-URL: https://andreaczhang.github.io/qtwAcademic/, https://github.com/andreaczhang/qtwAcademic
+URL: https://andreaczhang.github.io/qtwAcademic/,
+    https://github.com/andreaczhang/qtwAcademic
 BugReports: https://github.com/andreaczhang/qtwAcademic/issues
 Encoding: UTF-8
 LazyData: true
