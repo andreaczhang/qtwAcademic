@@ -1,4 +1,11 @@
 url: https://andreaczhang.github.io/qtwAcademic/
+
 template:
   bootstrap: 5
 
+home:
+  title: Quarto Website Templates for Academics
+
+authors:
+  Chi Zhang:
+    href: https://andreaczhang.github.io

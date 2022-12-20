@@ -1,0 +1,22 @@
+---
+title: "Template for courses and workshops"
+author: "Chi Zhang"
+date: "2022-12-19"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Templates for courses and workshops}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+This package allows you to quickly start your Quarto website project. 
+
+

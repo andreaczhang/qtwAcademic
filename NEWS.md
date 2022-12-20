@@ -1,3 +1,3 @@
-# qtwAcademic 2020.2.17
+# qtwAcademic 2022.12.20
 
-- Package is created
+Basic functionalities of the package are included.
