@@ -1,4 +1,4 @@
-# qtwAcademic <a href="https://andreaczhang.github.io/qtwAcademic/">
+# qtwAcademic <a href="https://andreaczhang.github.io/qtwAcademic/"><img src="man/figures/logo_qtwAcademic.png" align="right" width="120" /></a>
 
 ## Overview 
 
