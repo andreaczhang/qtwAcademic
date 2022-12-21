@@ -9,14 +9,11 @@ Authors@R:
         role = c("aut", "cre"),
         email = "andreachizhang@yahoo.com",
 	comment = c(ORCID = "0000-0003-0501-5909")))
-Description: This package generates Quarto website templates for academics.
+Description: This package generates Quarto website templates as an R project for academics.
     Templates for personal websites and course/workshop websites are included.
-Depends: R (>= 3.3.2)
+Depends: R (>= 4.0.0)
 Imports: 
-    fs,
-    data.table, 
-    ggplot2, 
-    magrittr
+    fs
 Suggests:
     knitr
 License: MIT + file LICENSE

@@ -1,27 +1,16 @@
-## Resubmission
+# New submission
 
-This is a resubmission. In this version I have:
+There were no ERRORs or WARNINGs.
 
-- Omitted all redundancies like "R Functions" in my title 
-- Added more details about my package in my Description text
-- Fixed unexecutable code in man/InitialiseProject.Rd
+NOTE: New submission by Chi Zhang (andreachizhang@yahoo.com)
 
+NOTE: 
+❯ checking installed package size ... NOTE
+    installed size is  5.5Mb
+    sub-directories of 1Mb or more:
+      doc   3.1Mb
 
-## Test environments
-* local Debian 9.5 install, R 3.5.2
-* ubuntu 14.04 (on travis-ci), R 3.5.2
-* win-builder (devel and release)
-
-## R CMD check results
-
-0 errors | 0 warnings
-
-Notes: 
-
-* checking CRAN incoming feasibility ... NOTE
-Maintainer: 'Richard White <w@rwhite.no>'
-
-New submission
+The package contains documentation vignettes that contain images. Possible reason for the large size of installed package.  
 
 ## Downstream dependencies
 

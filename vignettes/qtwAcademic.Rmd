@@ -78,7 +78,7 @@ website:
       - href: about.qmd
         text: About
 ```
-It is straightfoward to understand where to find the relevant files in order to change the text. For example, 
+It is straightforward to understand where to find the relevant files in order to change the text. For example, 
 **Home** contains one figure and some text about the author, which can be edited in `index.qmd`. 
 
 
@@ -100,7 +100,7 @@ Quarto has a few templates for the About page. Read more [here](https://quarto.o
 
 1. create a new Quarto markdown file, such as `talks.qmd`. The easiest way to do that is to copy from project. 
 
-2. speficy where you want to place the new content in `_quarto.yml`. 
+2. specify where you want to place the new content in `_quarto.yml`. 
 
 
 

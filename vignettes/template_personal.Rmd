@@ -23,7 +23,7 @@ In this page you will find a slightly more complex personal website setup. This 
 
 - The **About** section is collapsed (sub-menu)
 
-- Listing is used to organise content in **Projects, Talks, Blog** sections
+- Listing is used to organize content in **Projects, Talks, Blog** sections
 
 These modifications are particular useful when you have more content, and wish to present them in different ways.
 
@@ -81,7 +81,7 @@ In top navigation, it is specified by **menu**.
 
 ## Page listing
 
-Compared to the Minimal template, **Projects** page contains more complex structures: page listing makes it possible to organise topics in various layouts. This can be achieved by editing the `yaml` header in `projects/index.qmd`. 
+Compared to the Minimal template, **Projects** page contains more complex structures: page listing makes it possible to organize topics in various layouts. This can be achieved by editing the `yaml` header in `projects/index.qmd`. 
 
 Under `contents`, provide the folder where your projects are stored; then specify `type` (grid, table or default).
 
@@ -123,5 +123,5 @@ This is how `type: default` looks like.
 
 <img src="img/v_pers_4.png" align="center" width="600" /></a>
 
-More inforrmation on page listing can be read [here](https://quarto.org/docs/websites/website-listings.html).
+More information on page listing can be read [here](https://quarto.org/docs/websites/website-listings.html).
 
