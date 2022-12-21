@@ -15,7 +15,8 @@ Depends: R (>= 4.0.0)
 Imports: 
     fs
 Suggests:
-    knitr
+    knitr,
+    rmarkdown
 License: MIT + file LICENSE
 URL: https://andreaczhang.github.io/qtwAcademic/,
     https://github.com/andreaczhang/qtwAcademic
