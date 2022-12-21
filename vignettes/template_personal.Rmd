@@ -66,8 +66,6 @@ When sub-sections under a topic is desired, you can put them in the sub-menu.
 
 In side navigation, it is specified by **section** and **contents** in the `_quarto.yml` file. 
 
-<img src="img/v_pers_5.png" align="center" width="600" /></a>
-
 In top navigation, it is specified by **menu**.
 
 ```
@@ -108,7 +106,6 @@ listing:
     sort-ui: false
     filter-ui: false
 ```
-<img src="img/v_pers_2.png" align="center" width="600" /></a>
 
 After the `yaml` header, edit the markdown text and reference the listing using the `id`:
 ```
@@ -117,11 +114,3 @@ It is convenient to use `id` to link to multiple folders.
 ::: {#ehr}
 :::
 ```
-<img src="img/v_pers_3.png" align="center" width="600" /></a>
-
-This is how `type: default` looks like. 
-
-<img src="img/v_pers_4.png" align="center" width="600" /></a>
-
-More information on page listing can be read [here](https://quarto.org/docs/websites/website-listings.html).
-

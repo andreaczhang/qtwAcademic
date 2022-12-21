@@ -57,18 +57,6 @@ This template has provided some useful content for users to get started:
 
 <img src="img/v_course_1.png" align="center" width="600" /></a>
 
-<img src="img/v_course_4.png" align="center" width="600" /></a>
-
 ## Authoring and computation
 
 Authoring with `qmd` is straightforward, especially for users with `R markdown` experience. To learn more about authoring and computation you can check [here](https://quarto.org/docs/authoring/markdown-basics.html).
-
-This is how the plain text document looks like.
-<img src="img/v_course_2.png" align="center" width="600" /></a>
-
-
-This is how the document with code chunks look like. 
-<img src="img/v_course_3.png" align="center" width="600" /></a>
-
-
-

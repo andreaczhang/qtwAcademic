@@ -40,11 +40,6 @@ Here we introduce the template with minimal content. When a project is created w
 * `styles.css`: style file. It is left empty in the template, but can be modified for advanced looks.
 * `projects/index.qmd`
 
-
-This is how the project looks. 
-
-<img src="img/v_min_1.png" align="center" width="600" /></a>
-
 Click **Render**, the website is generated and can be seen in the Viewer panel.
 
 
@@ -89,11 +84,6 @@ The **Projects** page is a standard Quarto markdown file.
 It is placed inside the project directory, however it is also ok to place it under the root directory, as long as the correct link is specified in `_quarto.yml`.
 
 <img src="img/v_min_3.png" align="center" width="600" /></a>
-
-## About page
-
-Quarto has a few templates for the About page. Read more [here](https://quarto.org/docs/websites/website-about.html).
-<img src="img/v_min_4.png" align="center" width="600" /></a>
 
 
 ## Add new pages and content
