@@ -8,13 +8,21 @@ The templates are designed to make it quick and easy for users with little or no
 
 More about Quarto can be read [here](https://quarto.org).
 
-### Templates
+## Templates
+
+So far, 3 templates have been implemented in this package:
 
 - Personal website 
 
+<img src="vignettes/img/v_pers_1.png" align="center" width="600" /></a>
+
 - Website for courses or workshops
 
+<img src="vignettes/img/v_course_1.png" align="center" width="600" /></a>
+
 - Minimal website template that can be easily customized
+
+<img src="vignettes/img/v_min_2.png" align="center" width="600" /></a>
 
 You can find more details on each option in the vignettes.
 

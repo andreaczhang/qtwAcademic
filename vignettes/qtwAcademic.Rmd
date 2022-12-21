@@ -90,10 +90,13 @@ It is placed inside the project directory, however it is also ok to place it und
 
 <img src="img/v_min_3.png" align="center" width="600" /></a>
 
+## About page
+
+Quarto has a few templates for the About page. Read more [here](https://quarto.org/docs/websites/website-about.html).
 <img src="img/v_min_4.png" align="center" width="600" /></a>
 
 
-## How to add new pages and content
+## Add new pages and content
 
 1. create a new Quarto markdown file, such as `talks.qmd`. The easiest way to do that is to copy from project. 
 

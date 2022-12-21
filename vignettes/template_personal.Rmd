@@ -17,6 +17,111 @@ knitr::opts_chunk$set(
 ```
 
 
-This package allows you to quickly start your Quarto website project. 
+In this page you will find a slightly more complex personal website setup. This template is different from the `Minimal` template in the following ways: 
 
+- Sidebar navigation
+
+- The **About** section is collapsed (sub-menu)
+
+- Listing is used to organise content in **Projects, Talks, Blog** sections
+
+These modifications are particular useful when you have more content, and wish to present them in different ways.
+
+## Navigation: side or top
+
+Side navigation bar can be useful if you have more topics to display. This is the way to set up a sidebar in the `_quarto.yml`. 
+
+```
+  sidebar:
+    pinned: true
+    align: center
+    style: "docked"
+    collapse-level: 1
+    contents:
+
+      - text: "Projects"
+        href: projects/index.qmd
+
+      - text: "Talks"
+        href: talks/index.qmd
+
+      - text: "Blog"
+        href: blog.qmd
+
+      - section: "About"
+        contents:
+          - text: "About me"
+            href: about.qmd
+          - text: "This template"
+            href: about_template.qmd
+```
+
+
+<img src="img/v_pers_1.png" align="center" width="600" /></a>
+
+
+## Sub-menu 
+
+When sub-sections under a topic is desired, you can put them in the sub-menu. 
+
+In side navigation, it is specified by **section** and **contents** in the `_quarto.yml` file. 
+
+<img src="img/v_pers_5.png" align="center" width="600" /></a>
+
+In top navigation, it is specified by **menu**.
+
+```
+  navbar:
+    left:
+      - text: "About"
+        menu:
+          - about.qmd
+          - about_template.qmd 
+```
+
+## Page listing
+
+Compared to the Minimal template, **Projects** page contains more complex structures: page listing makes it possible to organise topics in various layouts. This can be achieved by editing the `yaml` header in `projects/index.qmd`. 
+
+Under `contents`, provide the folder where your projects are stored; then specify `type` (grid, table or default).
+
+```
+listing:
+  - id: ehr
+    max-description-length: 500
+    image-height: 150px
+    fields: [image, title, description]
+    contents: 
+      - project_1
+      - project_2
+    type: grid
+    grid-item-border: false
+  - id: packages
+    max-description-length: 80
+    image-height: 250px
+    fields: [title, description]
+    contents: 
+      - pkg_1
+      - pkg_2
+    type: table
+    grid-item-border: false
+    sort-ui: false
+    filter-ui: false
+```
+<img src="img/v_pers_2.png" align="center" width="600" /></a>
+
+After the `yaml` header, edit the markdown text and reference the listing using the `id`:
+```
+It is convenient to use `id` to link to multiple folders. 
+
+::: {#ehr}
+:::
+```
+<img src="img/v_pers_3.png" align="center" width="600" /></a>
+
+This is how `type: default` looks like. 
+
+<img src="img/v_pers_4.png" align="center" width="600" /></a>
+
+More inforrmation on page listing can be read [here](https://quarto.org/docs/websites/website-listings.html).
 
