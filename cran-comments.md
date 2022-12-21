@@ -1,3 +1,15 @@
+# Resubmission 2022.12.21
+
+In this version I did the following:
+
+- reduced the size of the installed package by changing the dataset included in the vignette
+
+- updated the names of external package with single quotation mark (i.e. 'Quarto') in the package title and description
+
+- in the example make_template(), changed path into tempdir()
+
+There were no ERRORs, WARNINGs or NOTEs.
+
 # New submission
 
 There were no ERRORs or WARNINGs.

@@ -12,11 +12,10 @@ editor: visual
 
 This page contains an example template for a lab session, where **R code and results** are displayed here.
 
-You can find more information on how to include code in Quarto website [here](https://quarto.org/docs/reference/cells/cells-knitr.html). 
+You can find more information on how to include code in Quarto website [here](https://quarto.org/docs/reference/cells/cells-knitr.html).
 
-You can experiment with `code-fold` and `code-tools` in the yaml header above to change how the code cells look like. 
+You can experiment with `code-fold` and `code-tools` in the yaml header above to change how the code cells look like.
 :::
-
 
 ## A Cancer Modeling Example
 
@@ -35,11 +34,11 @@ Read the data, and convert to matrix format.
 #| warning: false
 #| echo: true
 
-mir <- read.table("data/data_example.txt", header=T, sep="\t", dec=".")
+mrna <- read.table("data/data_example.txt", header=T, sep="\t", dec=".")
 
 # Convert to matrix format
 
-mir <- as.matrix(mir)
+mrna <- as.matrix(mrna)
 ```
 
 Print the data
@@ -49,13 +48,13 @@ Print the data
 #| warning: false
 #| echo: true
 
-mir[1:4, 1:4]
+mrna[1:4, 1:4]
 ```
 
 Visualise the overall distribution of expression levels by histogram
 
 ```{r}
-hist(mir, nclass=40, xlim=c(-5,5), col="lightblue")
+hist(mrna, nclass=40, xlim=c(-5,5), col="lightblue")
 ```
 
 ::: callout-note

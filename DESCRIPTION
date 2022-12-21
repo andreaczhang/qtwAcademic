@@ -1,5 +1,5 @@
 Package: qtwAcademic
-Title: Quarto Website Templates for Academics
+Title: 'Quarto' Website Templates for Academics
 Version: 2022.12.13
 Authors@R: 
     c(
@@ -9,8 +9,8 @@ Authors@R:
         role = c("aut", "cre"),
         email = "andreachizhang@yahoo.com",
 	comment = c(ORCID = "0000-0003-0501-5909")))
-Description: This package generates Quarto website templates as an R project for academics.
-    Templates for personal websites and course/workshop websites are included.
+Description: Provides three 'Quarto' website templates as an R project, which are commonly used by academics.
+    Templates for personal websites and course/workshop websites are included, as well as a template with minimal content for customization.
 Depends: R (>= 4.0.0)
 Imports: 
     fs

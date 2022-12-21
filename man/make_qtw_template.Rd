@@ -20,6 +20,6 @@ that are commonly used by academics.
 }
 \examples{
 \dontrun{
-  make_qtw_template(path = "~/test_project", template_option = "Minimal")
+  make_qtw_template(path = tempdir(), template_option = "Minimal")
 }
 }
