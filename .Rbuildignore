@@ -8,3 +8,4 @@ data-raw
 cran-comments.md
 ^\.github$
 ^pkgdown$
+^CRAN-SUBMISSION$
