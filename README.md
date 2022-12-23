@@ -24,13 +24,19 @@ You can find more details on each option in the vignettes.
 
 ## Installation
 
-`qtwAcademic` has not been accepted in CRAN yet. You can install the development version from GitHub. 
+`qtwAcademic` has been accepted in CRAN, you can install by 
+
+```
+install.packages('qtwAcademic')
+```
+
+Alternatively, you can install the development version from GitHub. 
 
 ```
 devtools::install_github("andreaczhang/qtwAcademic")
 ```
 
-`qtwAcademic` depends on `quarto`, so it is necessary to have the latest version.
+`qtwAcademic` depends on `quarto`. It is necessary to have the latest version of `quarto`, `rmarkdown` as well as Rstudio.
 
 ```
 install.packages("quarto")
