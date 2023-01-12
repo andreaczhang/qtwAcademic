@@ -1,0 +1,12 @@
+pandoc: 2.19.2
+pkgdown: 2.0.2
+pkgdown_sha: ~
+articles:
+  qtwAcademic: qtwAcademic.html
+  template_course: template_course.html
+  template_personal: template_personal.html
+last_built: 2023-01-12T10:59Z
+urls:
+  reference: https://andreaczhang.github.io/qtwAcademic/reference
+  article: https://andreaczhang.github.io/qtwAcademic/articles
+
