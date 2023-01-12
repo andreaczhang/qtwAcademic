@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ```
 
 
-Creating and publishing a Quarto websites is not difficult; however, the flexibility and options Quarto provides can make it challenging for people who are new to Quarto and websites to get started. This package aims to make it quick and easy for users to create their own websites for **personal portfolio and/or course websites** as an R project.
+Creating and publishing a Quarto websites is not difficult, however, the flexibility and options Quarto provides can make it challenging for people who are new to Quarto and websites to get started. This package aims to make it quick and easy for users to create their own websites for **personal portfolio and/or course websites** as an R project.
 
 
 ### Templates
